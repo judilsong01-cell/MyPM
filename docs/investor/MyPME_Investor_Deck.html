@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MyPME Investor Deck</title>
+    <style>
+      :root {
+        --ink: #0f172a;
+        --blue: #2563eb;
+        --bg: #eef4ff;
+        --panel: #ffffff;
+        --muted: #475569;
+        --line: #dbe6f5;
+        --green: #16a34a;
+        --amber: #f59e0b;
+        --red: #dc2626;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28%),
+          linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+      }
+      .wrap {
+        width: min(1120px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 40px 0 72px;
+      }
+      .hero, .slide {
+        background: rgba(255,255,255,.92);
+        border: 1px solid rgba(219,230,245,.9);
+        border-radius: 28px;
+        box-shadow: 0 20px 70px rgba(15,23,42,.08);
+        backdrop-filter: blur(8px);
+      }
+      .hero {
+        padding: 56px;
+        display: grid;
+        grid-template-columns: 1.3fr .9fr;
+        gap: 28px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(37,99,235,.1);
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-size: 58px;
+        line-height: 1.02;
+        margin: 18px 0 14px;
+      }
+      .lead {
+        font-size: 20px;
+        line-height: 1.55;
+        color: var(--muted);
+        max-width: 680px;
+      }
+      .hero-card {
+        background: linear-gradient(180deg, #0f172a 0%, #172554 100%);
+        border-radius: 24px;
+        padding: 28px;
+        color: white;
+      }
+      .hero-card h2 {
+        margin: 0 0 10px;
+        font-size: 24px;
+      }
+      .hero-card p {
+        color: rgba(255,255,255,.84);
+        line-height: 1.6;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .stat {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 18px;
+      }
+      .stat b {
+        display: block;
+        font-size: 28px;
+        margin-top: 6px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 24px;
+      }
+      .slide {
+        padding: 34px;
+      }
+      .slide h3 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+      .slide p {
+        margin: 0 0 16px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .list {
+        display: grid;
+        gap: 12px;
+      }
+      .list div {
+        padding: 16px 18px;
+        background: #f8fbff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+      }
+      .roadmap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .phase {
+        border-radius: 20px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .phase small {
+        color: var(--blue);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+      }
+      .phase h4 {
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .pill-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+      .pill {
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .blue { background: rgba(37,99,235,.12); color: var(--blue); }
+      .green { background: rgba(22,163,74,.12); color: var(--green); }
+      .amber { background: rgba(245,158,11,.14); color: #b45309; }
+      .red { background: rgba(220,38,38,.12); color: var(--red); }
+      .footer {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; padding: 32px; }
+        .stats, .grid, .roadmap { grid-template-columns: 1fr; }
+        h1 { font-size: 40px; }
+      }
+      @media print {
+        body { background: white; }
+        .wrap { width: 100%; padding: 0; }
+        .hero, .slide { box-shadow: none; break-inside: avoid; margin-bottom: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Investor Brief</span>
+          <h1>MyPME</h1>
+          <p class="lead">
+            Infraestrutura operacional para pequenos negocios em Angola. Comeca como app de controlo
+            diario e evolui para plataforma fintech baseada em dados de operacao real.
+          </p>
+          <div class="pill-row">
+            <span class="pill blue">Offline-first</span>
+            <span class="pill green">Android funcional</span>
+            <span class="pill amber">Pronto para pilotos</span>
+            <span class="pill red">Fintech-ready roadmap</span>
+          </div>
+          <div class="stats">
+            <div class="stat">Camada inicial<b>Operacao</b></div>
+            <div class="stat">Mercado alvo<b>PMEs Angola</b></div>
+            <div class="stat">Core tech<b>RN + SQLite</b></div>
+            <div class="stat">Escala futura<b>API + Banking</b></div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Problema direto</h2>
+          <p>
+            O pequeno negocio perde controlo quando vende no caderno, gere fiado por memoria e trabalha
+            com internet irregular. Isso destrui margem, disciplina financeira e capacidade de crescer.
+          </p>
+          <h2>Resposta do produto</h2>
+          <p>
+            MyPME regista vendas, despesas, fiado e stock com velocidade, funciona offline e prepara a
+            transicao para servicos financeiros de maior valor.
+          </p>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="slide">
+          <h3>Porque este projeto importa</h3>
+          <p>O produto entra no fluxo diario do negocio. Isso aumenta retencao e cria dados estruturados onde hoje ha caos operacional.</p>
+          <div class="list">
+            <div>Registo rapido de vendas e despesas</div>
+            <div>Fiado com controlo e marcacao de pagamento</div>
+            <div>Base de inventario e alertas de stock</div>
+            <div>Sincronizacao cloud quando houver internet</div>
+          </div>
+        </article>
+        <article class="slide">
+          <h3>Diferenciais reais</h3>
+          <p>O MyPME foi desenhado para o contexto local, nao como software genérico adaptado superficialmente.</p>
+          <div class="list">
+            <div>Offline-first como requisito de mercado</div>
+            <div>Experiencia orientada a uso no balcao</div>
+            <div>Seguranca local por conta no mesmo dispositivo</div>
+            <div>Base pronta para backend fintech dedicado</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="slide" style="margin-top:24px;">
+        <h3>Roadmap de expansao</h3>
+        <p>O caminho de valor e claro: software operacional, depois plataforma de dados, depois fintech.</p>
+        <div class="roadmap">
+          <div class="phase">
+            <small>Fase 1</small>
+            <h4>Produto comercial</h4>
+            <p>Sync robusto, inventario completo, relatorios, Play Store, pilotos reais e instrumentacao.</p>
+          </div>
+          <div class="phase">
+            <small>Fase 2</small>
+            <h4>Plataforma</h4>
+            <p>Backend consolidado, API profissional, multiutilizador, multi-negocio e score financeiro inicial.</p>
+          </div>
+          <div class="phase">
+            <small>Fase 3</small>
+            <h4>Fintech</h4>
+            <p>Pagamentos, integracoes bancarias, conectores, score e servicos financeiros para PMEs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="slide">
+          <h3>Modelo de negocio</h3>
+          <p>Entrada freemium e monetizacao progressiva conforme a operacao do cliente cresce.</p>
+          <div class="list">
+            <div>Plano gratuito com base operacional</div>
+            <div>Premium com sync, relatorios e multi-dispositivo</div>
+            <div>Camadas futuras de servicos financeiros</div>
+          </div>
+        </article>
+        <article class="slide">
+          <h3>O que o investimento acelera</h3>
+          <p>Capital aqui nao compra apenas features. Compra velocidade para transformar um MVP real em produto comercial escalavel.</p>
+          <div class="list">
+            <div>Engenharia de produto e backend</div>
+            <div>QA, observabilidade e release comercial</div>
+            <div>Pilotos, distribuicao inicial e validacao de mercado</div>
+          </div>
+        </article>
+      </section>
+
+      <div class="footer">
+        MyPME - investor materials generated from the current product workspace
+      </div>
+    </div>
+  </body>
+</html>

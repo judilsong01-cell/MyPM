@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+
+  <rect width="512" height="512" rx="100" fill="#0F172A"/>
+  <!-- Three horizontal lines (hamburger) -->
+  <rect x="120" y="172" width="272" height="36" rx="18" fill="#2563EB"/>
+  <rect x="120" y="238" width="272" height="36" rx="18" fill="#60A5FA" opacity="0.7"/>
+  <rect x="120" y="304" width="272" height="36" rx="18" fill="#60A5FA" opacity="0.4"/>
+  <!-- Dot indicators -->
+  <circle cx="430" cy="190" r="22" fill="#16A34A"/>
+
+</svg>

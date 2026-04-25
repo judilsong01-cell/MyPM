@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200" fill="none">
+  <!-- Icon box — dark on transparent -->
+  <rect x="0" y="12" width="152" height="152" rx="32" fill="#0F172A"/>
+
+  <!-- Mini bar chart inside icon -->
+  <rect x="24" y="100" width="26" height="44" rx="6" fill="#60A5FA" opacity="0.6"/>
+  <rect x="59" y="76" width="26" height="68" rx="6" fill="#3B82F6" opacity="0.8"/>
+  <rect x="94" y="48" width="26" height="96" rx="6" fill="#2563EB"/>
+  <polyline points="37,98 72,74 107,46" stroke="#4ADE80" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <circle cx="107" cy="46" r="6" fill="#4ADE80"/>
+
+  <!-- Wordmark -->
+  <text x="178" y="116"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="80" font-weight="300"
+        fill="#2563EB" letter-spacing="-1">my</text>
+  <text x="308" y="116"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="80" font-weight="900"
+        fill="#0F172A" letter-spacing="3">PME</text>
+
+  <!-- Tagline -->
+  <text x="178" y="148"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="18" font-weight="400"
+        fill="#94A3B8" letter-spacing="3">GESTÃO SIMPLES. CRESCIMENTO REAL.</text>
+</svg>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>myPME – Brand Identity</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0F172A; --blue: #2563EB; --lblue: #60A5FA;
+    --green: #4ADE80; --slate: #1E293B; --gray: #64748B; --light: #F8FAFC;
+  }
+  body { background: #070D1A; font-family: -apple-system, 'Segoe UI', sans-serif; color: var(--light); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #0F172A 100%);
+    padding: 72px 40px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #1E293B;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(37,99,235,0.15) 0%, transparent 70%);
+  }
+  .hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 4px; color: var(--lblue); text-transform: uppercase; margin-bottom: 16px; opacity: 0.8; }
+  .hero-title { font-size: 48px; font-weight: 900; color: white; letter-spacing: -2px; line-height: 1.1; position: relative; }
+  .hero-title em { color: var(--lblue); font-style: normal; }
+  .hero-sub { font-size: 16px; color: var(--gray); margin-top: 12px; position: relative; }
+  .hero-logo { margin: 32px auto 0; max-width: 280px; position: relative; }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+  .section { margin-top: 64px; }
+  .section-title {
+    font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--lblue); margin-bottom: 6px;
+  }
+  .section-desc { font-size: 15px; color: var(--gray); margin-bottom: 24px; line-height: 1.6; }
+  h2 { font-size: 26px; font-weight: 800; color: white; margin-bottom: 4px; letter-spacing: -0.5px; }
+
+  /* ── CARDS ── */
+  .grid { display: grid; gap: 16px; }
+  .grid-2 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .grid-4 { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .card {
+    background: var(--slate); border-radius: 20px;
+    border: 1px solid #334155; overflow: hidden;
+  }
+  .card-preview {
+    padding: 32px; display: flex; align-items: center; justify-content: center;
+    min-height: 160px;
+  }
+  .card-preview.dark { background: var(--navy); }
+  .card-preview.light { background: #F1F5F9; }
+  .card-preview.mid { background: #1E293B; }
+  .card-preview.gradient {
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%);
+  }
+  .card-footer {
+    padding: 14px 18px; border-top: 1px solid #334155;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .card-name { font-size: 13px; font-weight: 700; color: white; }
+  .card-file { font-size: 11px; color: var(--gray); font-family: monospace; }
+  .card-badge {
+    display: inline-flex; align-items: center; padding: 3px 9px;
+    border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+  }
+  .b-blue { background: rgba(37,99,235,0.2); color: #93C5FD; }
+  .b-green { background: rgba(74,222,128,0.15); color: #4ADE80; }
+  .b-amber { background: rgba(217,119,6,0.2); color: #FCD34D; }
+  .b-gray  { background: rgba(100,116,139,0.2); color: #94A3B8; }
+
+  /* ── COLOR PALETTE ── */
+  .palette { display: flex; gap: 12px; flex-wrap: wrap; }
+  .swatch { border-radius: 14px; overflow: hidden; flex: 1; min-width: 100px; }
+  .swatch-color { height: 80px; }
+  .swatch-info { background: var(--slate); padding: 10px 12px; border: 1px solid #334155; border-top: none; border-radius: 0 0 14px 14px; }
+  .swatch-name { font-size: 12px; font-weight: 700; color: white; }
+  .swatch-hex { font-size: 11px; color: var(--gray); font-family: monospace; }
+
+  /* ── SIZES ── */
+  .size-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .size-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .size-label { font-size: 11px; color: var(--gray); font-family: monospace; }
+
+  /* ── USAGE RULES ── */
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .rule {
+    background: var(--slate); border-radius: 14px; border: 1px solid #334155;
+    padding: 16px;
+  }
+  .rule.do { border-left: 3px solid #4ADE80; }
+  .rule.dont { border-left: 3px solid #DC2626; }
+  .rule-header { font-size: 12px; font-weight: 800; margin-bottom: 6px; letter-spacing: 1px; }
+  .rule.do .rule-header { color: #4ADE80; }
+  .rule.dont .rule-header { color: #FCA5A5; }
+  .rule p { font-size: 13px; color: var(--gray); line-height: 1.5; }
+
+  /* ── FOOTER ── */
+  .brand-footer { margin-top: 80px; padding: 32px; background: var(--slate); border-radius: 20px; border: 1px solid #334155; }
+  .folder-tree { font-family: monospace; font-size: 13px; color: #94A3B8; line-height: 1.9; }
+  .folder-tree .dir { color: #60A5FA; font-weight: 700; }
+  .folder-tree .file { color: #4ADE80; }
+
+  img { display: block; max-width: 100%; }
+  @media (max-width: 600px) { .rules { grid-template-columns: 1fr; } .hero-title { font-size: 32px; } }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">myPME · Brand Identity System</div>
+  <div class="hero-title">my<em>PME</em> Logo</div>
+  <div class="hero-sub">Sistema de identidade visual · Angola · 2025</div>
+  <div class="hero-logo">
+    <img src="logo_horizontal_dark.svg" alt="myPME Logo" style="border-radius:16px;">
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- APP ICON -->
+  <div class="section">
+    <div class="section-title">App Icon</div>
+    <h2>Ícone principal da aplicação</h2>
+    <div class="section-desc">1024×1024px. Gráfico de barras crescente com seta verde. Fundo navy com gradiente sutil.</div>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-preview dark">
+          <img src="logo_app_icon.svg" style="width:160px;height:160px;border-radius:36px;">
+        </div>
+        <div class="card-footer">
+          <div><div class="card-name">App Icon — Dark</div><div class="card-file">logo_app_icon.svg</div></div>
+          <span class="card-badge b-blue">1024×1024</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-preview light">
+          <img src="logo_icon_only.svg" style="width:140px;height:140px;border-radius:32px;">
+        </div>
+        <div class="card-footer">
+          <div><div class="card-name">Icon Only — Transparent</div><div class="card-file">logo_icon_only.svg</div></div>
+          <span class="card-badge b-green">512×512</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HORIZONTAL -->
+  <div class="section">
+    <div class="section-title">Logótipo Horizontal</div>
+    <h2>Versões com wordmark</h2>
+    <div class="section-desc">Versão principal para headers, splash screens e materiais de marketing.</div>
+    <div class="grid" style="gap:16px;">
+      <div class="card">
+        <div class="card-preview dark" style="padding:24px 32px;">
+          <img src="logo_horizontal_dark.svg" style="width:100%;max-width:500px;">
+        </div>
+        <div class="card-footer">
+          <div><div class="card-name">Horizontal — Fundo Escuro</div><div class="card-file">logo_horizontal_dark.svg</div></div>
+          <span class="card-badge b-blue">800×200</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-preview light" style="padding:24px 32px;">
+          <img src="logo_horizontal_transparent.svg" style="width:100%;max-width:500px;">
+        </div>
+        <div class="card-footer">
+          <div><div class="card-name">Horizontal — Fundo Claro</div><div class="card-file">logo_horizontal_transparent.svg</div></div>
+          <span class="card-badge b-green">Transparente</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIZES -->
+  <div class="section">
+    <div class="section-title">Escalabilidade</div>
+    <h2>Legível em todos os tamanhos</h2>
+    <div class="section-desc">O ícone é optimizado para funcionar desde 16px até 1024px.</div>
+    <div class="card" style="padding:32px 28px;">
+      <div class="size-row">
+        <div class="size-item">
+          <img src="logo_favicon_32.svg" style="width:16px;height:16px;">
+          <div class="size-label">16px</div>
+        </div>
+        <div class="size-item">
+          <img src="logo_favicon_32.svg" style="width:24px;height:24px;">
+          <div class="size-label">24px</div>
+        </div>
+        <div class="size-item">
+          <img src="logo_favicon_32.svg" style="width:32px;height:32px;border-radius:6px;">
+          <div class="size-label">32px</div>
+        </div>
+        <div class="size-item">
+          <img src="logo_favicon_32.svg" style="width:48px;height:48px;border-radius:10px;">
+          <div class="size-label">48px</div>
+        </div>
+        <div class="size-item">
+          <img src="logo_icon_only.svg" style="width:64px;height:64px;border-radius:14px;">
+          <div class="size-label">64px</div>
+        </div>
+        <div class="size-item">
+          <img src="logo_icon_only.svg" style="width:96px;height:96px;border-radius:20px;">
+          <div class="size-label">96px</div>
+        </div>
+        <div class="size-item">
+          <img src="logo_icon_only.svg" style="width:128px;height:128px;border-radius:28px;">
+          <div class="size-label">128px</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VARIANTS -->
+  <div class="section">
+    <div class="section-title">Variantes</div>
+    <h2>Versões complementares</h2>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="card-preview dark" style="padding:24px;">
+          <img src="logo_icon_white.svg" style="width:96px;height:96px;">
+        </div>
+        <div class="card-footer" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <div class="card-name">Branco</div>
+          <div class="card-file">logo_icon_white.svg</div>
+          <span class="card-badge b-gray">Monochrome</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-preview light" style="padding:24px;">
+          <img src="logo_monochrome.svg" style="width:140px;">
+        </div>
+        <div class="card-footer" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <div class="card-name">Monocromático</div>
+          <div class="card-file">logo_monochrome.svg</div>
+          <span class="card-badge b-gray">Print / Stamp</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-preview dark" style="padding:20px;">
+          <img src="logo_favicon_32.svg" style="width:80px;height:80px;border-radius:18px;">
+        </div>
+        <div class="card-footer" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <div class="card-name">Favicon</div>
+          <div class="card-file">logo_favicon_32.svg</div>
+          <span class="card-badge b-amber">Optimizado 32px</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-preview gradient" style="padding:20px;">
+          <img src="logo_splash.svg" style="width:80px;height:142px;border-radius:12px;">
+        </div>
+        <div class="card-footer" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <div class="card-name">Splash Screen</div>
+          <div class="card-file">logo_splash.svg</div>
+          <span class="card-badge b-blue">1080×1920</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PALETTE -->
+  <div class="section">
+    <div class="section-title">Paleta de Cores</div>
+    <h2>Cores da marca</h2>
+    <div class="section-desc">Sistema de cores consistente para toda a identidade visual do myPME.</div>
+    <div class="palette">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0F172A;"></div>
+        <div class="swatch-info"><div class="swatch-name">Navy</div><div class="swatch-hex">#0F172A</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#2563EB;"></div>
+        <div class="swatch-info"><div class="swatch-name">Blue</div><div class="swatch-hex">#2563EB</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#60A5FA;"></div>
+        <div class="swatch-info"><div class="swatch-name">Sky</div><div class="swatch-hex">#60A5FA</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4ADE80;"></div>
+        <div class="swatch-info"><div class="swatch-name">Green</div><div class="swatch-hex">#4ADE80</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FCD34D;"></div>
+        <div class="swatch-info"><div class="swatch-name">Amber</div><div class="swatch-hex">#FCD34D</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#DC2626;"></div>
+        <div class="swatch-info"><div class="swatch-name">Red</div><div class="swatch-hex">#DC2626</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- USAGE RULES -->
+  <div class="section">
+    <div class="section-title">Regras de Uso</div>
+    <h2>O que fazer e evitar</h2>
+    <div class="rules">
+      <div class="rule do"><div class="rule-header">✓ FAZER</div><p>Usar sempre sobre fundos navy, escuros ou brancos limpos. Manter espaço mínimo de 1× a altura do ícone à volta.</p></div>
+      <div class="rule dont"><div class="rule-header">✕ EVITAR</div><p>Não distorcer as proporções. Não usar sobre fundos com padrões complexos ou cores que colidam com o azul.</p></div>
+      <div class="rule do"><div class="rule-header">✓ FAZER</div><p>Para fundo claro, usar a versão "transparent" com wordmark navy. Para fundo escuro, usar a versão "dark".</p></div>
+      <div class="rule dont"><div class="rule-header">✕ EVITAR</div><p>Não alterar as cores do ícone. Não adicionar sombras, gradientes externos ou efeitos não especificados.</p></div>
+    </div>
+  </div>
+
+  <!-- FOLDER STRUCTURE -->
+  <div class="brand-footer">
+    <div class="section-title" style="margin-bottom:12px;">Estrutura de ficheiros</div>
+    <div class="folder-tree">
+<span class="dir">myPME_Logo/</span>
+├── <span class="file">logo_app_icon.svg</span>            ← App Store / Play Store (1024×1024)
+├── <span class="file">logo_horizontal_dark.svg</span>     ← Header, splash (fundo escuro)
+├── <span class="file">logo_horizontal_transparent.svg</span> ← Documentos, fundo claro
+├── <span class="file">logo_icon_only.svg</span>           ← Ícone isolado (512×512)
+├── <span class="file">logo_icon_white.svg</span>          ← Versão branca (overlay escuro)
+├── <span class="file">logo_monochrome.svg</span>          ← Impressão, carimbo, bordado
+├── <span class="file">logo_favicon_32.svg</span>          ← Web favicon, notificações (32px optimized)
+└── <span class="file">logo_splash.svg</span>              ← Splash screen Android/iOS (1080×1920)
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+
+  <!-- BG plate -->
+  <rect x="60" y="240" width="360" height="80" rx="16" fill="#1E293B" opacity="0.5"/>
+  <!-- Bar chart bars (empty / faded) -->
+  <rect x="110" y="200" width="44" height="120" rx="8" fill="#1E293B" stroke="#64748B" stroke-width="2" opacity="0.6"/>
+  <rect x="174" y="160" width="44" height="160" rx="8" fill="#1E293B" stroke="#64748B" stroke-width="2" opacity="0.6"/>
+  <rect x="238" y="180" width="44" height="140" rx="8" fill="#1E293B" stroke="#64748B" stroke-width="2" opacity="0.6"/>
+  <rect x="302" y="140" width="44" height="180" rx="8" fill="#1E293B" stroke="#64748B" stroke-width="2" opacity="0.6"/>
+  <!-- Dashed trend line -->
+  <polyline points="132,198 196,158 260,178 324,138" stroke="#64748B" stroke-width="4" stroke-dasharray="12 8" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <!-- Coin stack (empty) -->
+  <ellipse cx="370" cy="130" rx="44" ry="18" fill="#1E293B" stroke="#64748B" stroke-width="2"/>
+  <rect x="326" y="110" width="88" height="40" fill="#1E293B"/>
+  <ellipse cx="370" cy="110" rx="44" ry="18" fill="#1E293B" stroke="#64748B" stroke-width="2"/>
+  <!-- Cross / empty signal -->
+  <circle cx="240" cy="100" r="46" fill="#0F172A" stroke="#64748B" stroke-width="3" stroke-dasharray="10 6"/>
+  <line x1="220" y1="80" x2="260" y2="120" stroke="#64748B" stroke-width="8" stroke-linecap="round"/>
+  <line x1="260" y1="80" x2="220" y2="120" stroke="#64748B" stroke-width="8" stroke-linecap="round"/>
+
+</svg>

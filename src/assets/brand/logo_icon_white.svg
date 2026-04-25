@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <!-- 3 rising bars — white tones -->
+  <rect x="96" y="276" width="86" height="186" rx="18" fill="white" opacity="0.3"/>
+  <rect x="210" y="196" width="86" height="266" rx="18" fill="white" opacity="0.6"/>
+  <rect x="324" y="112" width="86" height="350" rx="18" fill="white" opacity="0.9"/>
+
+  <!-- Floor -->
+  <line x1="80" y1="464" x2="432" y2="464" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.25"/>
+
+  <!-- Trend line -->
+  <polyline points="139,268 253,188 367,104" stroke="white" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <circle cx="367" cy="104" r="18" fill="white"/>
+</svg>

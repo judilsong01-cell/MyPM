@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+
+  <rect width="512" height="512" rx="100" fill="#0F172A"/>
+  <!-- Calculator / receipt shape -->
+  <rect x="130" y="90" width="252" height="330" rx="24" fill="#1E293B" stroke="#2563EB" stroke-width="14"/>
+  <!-- Display -->
+  <rect x="158" y="120" width="196" height="64" rx="12" fill="#0F172A"/>
+  <text x="346" y="164" text-anchor="end" font-family="monospace" font-size="42" font-weight="700" fill="#4ADE80">12.500</text>
+  <!-- Keypad dots -->
+  <circle cx="186" cy="232" r="16" fill="#2563EB"/>
+  <circle cx="256" cy="232" r="16" fill="#2563EB"/>
+  <circle cx="326" cy="232" r="16" fill="#2563EB"/>
+  <circle cx="186" cy="288" r="16" fill="#60A5FA" opacity="0.7"/>
+  <circle cx="256" cy="288" r="16" fill="#60A5FA" opacity="0.7"/>
+  <circle cx="326" cy="288" r="16" fill="#60A5FA" opacity="0.7"/>
+  <circle cx="186" cy="344" r="16" fill="#60A5FA" opacity="0.5"/>
+  <circle cx="256" cy="344" r="16" fill="#60A5FA" opacity="0.5"/>
+  <circle cx="326" cy="344" r="16" fill="#4ADE80"/>
+  <!-- Confirm button -->
+  <rect x="158" y="370" width="196" height="34" rx="10" fill="#16A34A"/>
+
+</svg>

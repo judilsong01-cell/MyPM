@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_background" />
+
+    <!-- Center the logo for pre-Android 12 devices -->
+    <item
+        android:drawable="@drawable/ic_splash"
+        android:gravity="center" />
+</layer-list>
+

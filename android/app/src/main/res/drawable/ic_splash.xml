@@ -1,0 +1,43 @@
+<!--
+  Simple vector based on MyPME icon geometry (from logo_icon_only.svg),
+  using solid colors so it renders reliably on Android splash screen.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M0,0H512V512H0Z" />
+
+    <!-- Bars -->
+    <path
+        android:fillColor="#60A5FA"
+        android:fillAlpha="0.55"
+        android:pathData="M96,276H182V462H96Z" />
+    <path
+        android:fillColor="#3B82F6"
+        android:fillAlpha="0.8"
+        android:pathData="M210,196H296V462H210Z" />
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M324,112H410V462H324Z" />
+
+    <!-- Trend line -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#4ADE80"
+        android:strokeWidth="18"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M139,268 L253,188 L367,104" />
+
+    <!-- End dot -->
+    <path
+        android:fillColor="#4ADE80"
+        android:pathData="M367,86 a18,18 0 1,0 0,36 a18,18 0 1,0 0,-36" />
+</vector>
+

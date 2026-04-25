@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+
+  <!-- Device / phone outline -->
+  <rect x="176" y="60" width="128" height="220" rx="20" fill="#1E293B" stroke="#64748B" stroke-width="3"/>
+  <circle cx="240" cy="254" r="10" fill="#64748B" opacity="0.5"/>
+  <rect x="210" y="72" width="60" height="8" rx="4" fill="#64748B" opacity="0.3"/>
+  <!-- Screen content (gray blocks) -->
+  <rect x="194" y="100" width="92" height="12" rx="4" fill="#64748B" opacity="0.3"/>
+  <rect x="194" y="122" width="64" height="10" rx="4" fill="#64748B" opacity="0.2"/>
+  <!-- WiFi symbol crossed out -->
+  <path d="M200,198 Q240,160 280,198" stroke="#64748B" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M214,214 Q240,196 266,214" stroke="#64748B" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <circle cx="240" cy="228" r="9" fill="#64748B" opacity="0.4"/>
+  <!-- Big X over wifi area -->
+  <circle cx="240" cy="200" r="56" fill="#0F172A" stroke="#DC2626" stroke-width="5" opacity="0.9"/>
+  <line x1="214" y1="174" x2="266" y2="226" stroke="#DC2626" stroke-width="14" stroke-linecap="round"/>
+  <line x1="266" y1="174" x2="214" y2="226" stroke="#DC2626" stroke-width="14" stroke-linecap="round"/>
+  <!-- Cloud outline (faded) -->
+  <path d="M100,310 Q80,310 80,290 Q80,268 102,265 Q104,244 124,244 Q132,232 148,238 Q154,222 174,226 Q180,208 200,214" stroke="#64748B" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.25"/>
+  <path d="M380,310 Q400,310 400,290 Q400,268 378,265 Q376,244 356,244 Q348,232 332,238 Q326,222 306,226 Q300,208 280,214" stroke="#64748B" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.25"/>
+
+</svg>
