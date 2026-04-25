@@ -1,70 +1,33 @@
-# MyPME
+﻿# MyPM – Gestão Inteligente para Pequenos Negócios
 
-MyPME e uma aplicacao mobile offline-first para micro e pequenas empresas em Angola.
-O produto foi desenhado para registo rapido de vendas, despesas, fiado e controlo operacional basico, com autenticacao por email e sincronizacao cloud quando houver internet.
+Aplicação mobile offline-first para micro e pequenos empreendedores.
 
-## O que existe hoje
+## 🚀 Funcionalidades
+- Gestão de vendas
+- Controlo de dívidas (fiado)
+- Gestão de stock
+- Sincronização segura
+- Funcionamento offline
 
-- Dashboard com resumo diario e mensal
-- Registo rapido de vendas e despesas
-- Gestao de fiado com atualizacao local imediata
-- Base SQLite local para funcionamento offline
-- Autenticacao com Appwrite Account (email/senha, Google, telefone OTP)
-- Verificacao obrigatoria (email ou telefone) antes de aceder ao dashboard
-- Sincronizacao manual para a nuvem
-- Branding, splash e icones preparados para Android
+## 🧠 Tecnologia
+- React Native + TypeScript
+- Appwrite (Auth + Database)
+- Arquitetura offline-first
 
-## Estrutura
+## 🔐 Segurança
+- autenticação obrigatória
+- verificação de utilizador
+- isolamento por userId
 
-- `src/screens` : experience principal do utilizador
-- `src/database` : SQLite local, migracoes e repositorios
-- `src/services` : Appwrite, sync e segredos de ambiente
-- `src/assets` : branding, icones e ilustracoes
-- `android` : build Android, assinatura e release
-- `docs` : materiais executivos e de produto
-  - `docs/Appwrite.md` : setup + hardening de Appwrite
+## 📦 Estrutura
+src/
+auth/
+services/
+database/
+navigation/
 
-## Stack
+## 📊 Estado
+MVP funcional
 
-- React Native 0.73.4
-- TypeScript 5.0.4
-- SQLite local
-- Appwrite Account + Databases
-- React Navigation
-- SVG assets
-
-## Comandos uteis
-
-```bash
-npm install
-npm start
-npm run android
-npm run typecheck
-```
-
-## Android release
-
-Arquivos principais:
-
-- `android/keystore.properties`
-- `android/app/app002-release.keystore`
-- `android/app/build.gradle`
-
-Build:
-
-```bat
-cd /d C:\Users\judil\Documents\Playground\002\App002\android
-gradlew clean
-gradlew bundleRelease
-```
-
-Saidas:
-
-- `android/app/build/outputs/bundle/release/app-release.aab`
-- `android/app/build/outputs/apk/release/app-release.apk`
-
-## Materiais de investidor
-
-- `docs/MyPME_OnePager.md`
-- `docs/investor/README.md`
-- `docs/investor/MyPME_Investor_Deck.html`
+## 🎯 Objetivo
+Plataforma escalável para PMEs em mercados emergentes
